@@ -162,6 +162,11 @@ Page({
                   "content-type": "application/x-www-form-urlencoded"
                 },
                 success(res) {
+                  wx.showToast({
+                    title:'退款成功',
+                    icon:'none',
+                    duration:2000
+                  })
                   console.log("data", data)
                   console.log("data:", typeof data);
                   console.log("succcess res", res);
