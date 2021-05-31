@@ -1,0 +1,5 @@
+<button bindtap='send1'>页面加载时</button>
+<button bindtap='send2'>订票</button>
+<button bindtap='send3'>查看自己的订单</button>
+
+  

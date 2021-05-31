@@ -1,0 +1,29 @@
+<scroll-view class="chanpins" scroll-y="true">
+
+<view class="danhao">
+   以下是订单详情 || 共{{num}}块场地 || 时间：{{time}}
+</view>  
+
+<view class="chanpin" wx:for-items="{{dict}}" wx:for-item="dict" wx:for-index="i">
+
+  <image class="chanpin-img" src="../../服务图标/篮球场.jpg"></image>
+  <view class="chanpin-info"> 
+    <view class="name" >{{veuneName}}  {{dict.value}}  {{dict.date}}  {{dict.key}}     </view>
+    
+    <view class="price">￥：{{singlePrice}}</view>
+  </view>
+ </view>
+
+ 
+ 
+
+<view class="jiesuan" >
+   <text>订单金额：{{totalPrice}}</text>
+</view>   
+<view class="caozuo">
+     <button  size='mini'>取消</button>
+    <button  size='mini' bindtap='toPay' >去付款</button>
+</view>   
+
+</scroll-view>
+

@@ -1,0 +1,91 @@
+<!-- tab -->
+<view class="swiper-tab">
+  <block wx:for="{{swipertab}}" wx:key="sptab">
+    <view class="swiper-tab-list {{currtab == item.index ? 'on' : ''}}" data-current="{{item.index}}"
+      bindtap="tabSwitch">{{item.name}}</view>
+  </block>
+</view>
+
+<swiper current="{{currtab}}" class="swiper-box" duration="300" style="height:{{deviceH-31}}px" bindchange="tabChange">
+  <!-- 完成 -->
+  <swiper-item>
+    <scroll-view class="hot-box" scroll-y="true">
+      <view class="orderDetails" wx:for="{{alreadyOrder}}" wx:key=" ">
+        <view class="orderListTitle">
+          <text class="userName">{{item.name}}</text>
+          <!--<button bindtap="listenerButton" class="orderStatus" data-index="{{item.uid}}">{{item.state}}</button>--> <!--原先的“查看入场券button”-->
+
+          <block wx:if="{{clickID == item.uid }}">
+            <modal title="入场二维码" hidden="{{hiddenModal}}" bindconfirm="listenerConfirm" bindcancel="listenerCancel">
+              <view>{{item.name}}, {{item.time}}</view>
+              <canvas bindlongpress="saveImage"></canvas>
+              <canvas class="canvas-code" style="width: 200px; height: 200px;" canvas-id="myQrcode{{item.uid}}"></canvas>
+              <view>凭二维码作为入场凭证</view>
+            </modal>
+          </block>
+
+        </view>
+        <view class="orderListDetails">
+          <view class="productImg">
+            <image src="{{item.url}}" background-size="cover"></image>
+          </view>
+          <view class="productInfo">
+            <view class="productTitle">时间: {{item.time}}</view>
+            <text class="productPrice">状态：{{item.status}}</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <!-- 未完成 -->
+  <swiper-item>
+    <scroll-view class="hot-box" scroll-y="true">
+      <view class="orderDetails" wx:for="{{waitPayOrder}}" wx:key=" ">
+        <view class="orderListTitle">
+          <text class="userName">{{item.name}}</text>
+          <button bindtap="listenerButton" class="orderStatus" data-index="{{item.uid}}">{{item.state}}</button>
+
+          <block wx:if="{{clickID == item.uid }}">
+            <modal title="入场券二维码" hidden="{{hiddenModal}}" bindconfirm="listenerConfirm" bindcancel="listenerCancel">
+              <canvas bindlongpress="saveImage"></canvas>
+              <canvas class="canvas-code" style="width: 200px; height: 200px;" canvas-id="myQrcode{{item.uid}}"></canvas>
+              <view>{{item.name}}</view>
+              <view>{{item.time}}</view>
+              <view>凭二维码作为入场凭证</view>
+            </modal>
+          </block>
+
+        </view>
+        <view class="orderListDetails">
+          <view class="productImg">
+            <image src="{{item.url}}" background-size="cover"></image>
+          </view>
+          <view class="productInfo">
+            <view class="productTitle">时间: {{item.time}}</view>
+            <text class="productPrice">状态：{{item.status}}</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <!-- 取消 -->
+  <swiper-item>
+    <scroll-view class="hot-box" scroll-y="true">
+      <view class="orderDetails" wx:for="{{lostOrder}}" wx:key=" ">
+        <view class="orderListTitle">
+          <text class="userName">{{item.name}}</text>
+          <text class="orderStatus">{{item.state}}</text>
+        </view>
+        <view class="orderListDetails">
+          <view class="productImg">
+            <image src="{{item.url}}" background-size="cover"></image>
+          </view>
+          <view class="productInfo">
+            <view class="productTitle">时间: {{item.time}}</view>
+            <text class="productPrice">状态：{{item.status}}</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

@@ -1,0 +1,30 @@
+.page__hd{
+  	font-size: 1rem;
+  	overflow: hidden;
+  	padding:0 15px;
+  	line-height: 44px;
+    background: #fff;
+    margin-bottom:4%;
+}
+.page__bd{
+  font-size: 1rem;
+}
+.num_price{
+  	float: left;
+}
+.price{
+  	float: right;
+    color:red;
+}
+.page__ft{
+	padding: 6% 4% 0 4%;
+}
+button[type="primary"] {
+	color:#FFFFFF;
+	background-color:#39c3f2;
+}
+.button-hover[type="primary"] {
+	color:rgba(255,255,255,0.6);
+	background-color:rgba(57,195,242,0.6);
+}
+

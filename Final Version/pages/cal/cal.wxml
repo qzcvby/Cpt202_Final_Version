@@ -1,0 +1,18 @@
+<scroll-view class="scroll-view" scroll-left="{{scrollLeftIndex*itemWidth}}" scroll-x scroll-with-animation>
+  <view class='item' style='width:{{itemWidth}}px' wx:for="{{dateList}}" data-index='{{index}}' bindtap='clickDate'>
+    <view class='text-view'>
+      <view class='day {{index==clickIndex?"day-active":""}}'>{{item.day}}</view>
+      <text class='month'>{{item.month}}月</text>
+      <view wx:if="{{item.month == sysmonth && item.day == nowDate}}">
+        <text class='week'>今日</text>
+      </view>
+      <view wx:else>
+        <text class='week'>{{item.week}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+  
+
+

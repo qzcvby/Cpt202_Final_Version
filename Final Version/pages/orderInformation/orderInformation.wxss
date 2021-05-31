@@ -1,0 +1,68 @@
+/*全部订单*/
+.chanpins{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background:  white;
+}
+.danhao{ 
+  font-size: 12px; color: gray;
+  height: 100rpx; margin-left: 20rpx;
+  border-bottom: 1rpx solid #ECECEC; 
+  background: white;
+  display: flex;
+  align-items: center;   
+}
+.chanpin{
+  display: flex;
+  padding: 15rpx;
+  height: 130rpx;
+  border-bottom: 1rpx solid #ECECEC; 
+  background: white; 
+}
+.chanpin-img{
+  width: 120rpx;
+  height: 120rpx;
+}
+.chanpin-info{
+  display: flex;
+  flex-direction:  column;
+  align-items:  flex-start;
+  flex: 1;
+  margin-left: 20rpx;
+}
+.name{
+  font-size: 30rpx; 
+}
+.sales{
+  font-size: 25rpx;
+  color: #ACACAC;text-align: left;
+}
+.price{
+  font-size: 30rpx;
+  color: red;text-align: left;
+}
+.chanpin-num{
+  height: 50rpx;
+  display: flex;
+  margin-top: 30rpx;
+  margin-right: 30rpx;
+  line-height: 50rpx;
+  font-size: 40rpx; 
+}
+.jiesuan{
+  font-size: 13px; color: gray;
+  height: 100rpx; margin-left: 20rpx;
+  border-bottom: 1rpx solid #ECECEC; 
+  background: white;
+  display: flex;
+  align-items: center;   
+}
+.caozuo{
+  height: 100rpx;
+  border-bottom: 1rpx solid #ECECEC; 
+  background: white;
+  display: flex;
+  align-items: center;   
+}

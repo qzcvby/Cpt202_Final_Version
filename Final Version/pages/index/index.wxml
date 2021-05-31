@@ -1,0 +1,125 @@
+<view class ="pyg_index">
+  <view wx:if="{{hasUserInfo}}">
+        <!-- 搜索框 开始 -->
+        <SearchInput></SearchInput>
+        <!-- 搜索框 结束 -->
+        <!-- 轮播图开始 -->
+        <view class="index_swiper">
+        <!-- 
+            1. swiper标签存在默认宽度高度 100%*150px
+            2. image标签也存在默认宽度和高度 320px*240px
+            3. 设计图片合轮播图
+            1. 找原图宽高
+            2. 让图片高度自适应 宽度等于100%
+            3. 让swiper标签的高度 变成和图片的高等比例
+            4. 图片标签
+            mode属性 渲染模式
+                widethFix 让图片的标签 合 图片标签的内容等比例变化
+        -->
+        <swiper autoplay indicator-dots circular>
+            <swiper-item 
+            wx:for="{{swiperList}}"
+            wx:key="goods_id"
+            >
+                <image mode="widthFix" src="{{item}}">
+                </image>    
+            </swiper-item>    
+        </swiper>
+
+        </view>
+        <!-- 轮播图结束 -->
+
+        <!-- 导航开始 -->
+        <view class = "index_cate">
+            <navigator url="/pages/04/04" open-type="switchTab"
+            wx:for="{{catesList}}"
+            wx:key="name"
+            >
+            <image mode="widthFix" src = "{{item}}"></image>
+            </navigator>
+        </view>
+        <!-- 导航结束 -->
+
+        <view class="selection">
+        <view class="header0">
+            <view class="title">基本信息
+                <view class="t2">Position  崇文路与学堂路交汇处西交利物浦大学体育馆</view>
+                <view class="t2">Time  10:00 - 21:00</view>
+                <view class="t2"><E-mail>E-mail  Sports.Centre@xjtlu.edu.cn</E-mail></view>
+                <view bindtap="getLocation">
+                    <image mode="widthFix" class="index_cate" src="https://z3.ax1x.com/2021/04/24/cvkyCQ.png" style="width:{{500}}rpx; height:{{imgheight }}rpx;" >
+                    
+
+                        
+                    </image>
+                </view>
+                
+            </view>
+            
+        </view>
+        </view>
+
+
+
+        <view>
+        <button bindtap="showPopup" class="btn1" >
+            <image class='btnImg' src='../../服务图标/telephone.png'></image>
+            联系场馆</button>
+        <popup id='popup' 
+            title='联系场馆' 
+            content='电话号码：8888888' 
+            btn_no='返回' 
+            btn_ok='拨打该号码'
+            bind:error="_error"  
+            bind:success="freeTell">
+        </popup>
+
+
+        <button class="btn2"open-type='contact' >
+            <image class='btnImg' src='../../服务图标/客服.png'></image>
+            联系客服</button>
+        </view>
+
+
+        <view class="selection">
+            
+            <view class="header"> 
+            
+                
+            
+            </view> 
+            <view class="title"> 场馆服务</view> 
+        <view class="content">
+                <view class="content-item">
+                    <image  src="../../服务图标/自动沐浴.png"/>
+                    <view class = "content-item-text">
+                        <text>沐浴</text>
+                    </view>              
+                </view>
+                <view class="content-item">
+                    <image  src="../../服务图标/空调.png"/>
+                    <view class = "content-item-text">
+                        <text>空调</text>
+                    </view>
+                </view>
+                <view class="content-item">
+                    <image  src="../../服务图标/wifi图标.png"/>
+                    <view class = "content-item-text">
+                        <text>Wifi</text>
+                    </view>
+                </view>
+                <view class="content-item">
+                    <image  src="../../服务图标/租柜图标.png"/>
+                    <view class = "content-item-text">
+                        <text>租柜</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+  </view>
+
+  <view class="authorization" wx:if="{{!hasUserInfo}}">
+      <button type="primary" bindtap="getUserProfile">授权登陆</button>
+  </view>
+
+</view>

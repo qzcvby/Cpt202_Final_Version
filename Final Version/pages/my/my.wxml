@@ -1,0 +1,40 @@
+<!--pages/my information/my information.wxml-->
+<view class="container">
+  <l-avatar  class="l-avatar" open-data="{{['userAvatarUrl','userNickName']}}"/>
+  <text class="motto"></text>
+</view>
+
+
+
+<view class="container2">
+  <view bind:tap="onTap" hover-class="hover" class="journey-container">
+    <l-icon  class="iconorder" size="40" color="#34BFA3"  name="history"color="#3683d6" />
+    <text class="journey">我的订单</text>      
+  </view>
+</view>
+
+
+<view class="container3">
+  <view bind:tap="onTap1" hover-class="hover" class="tickets-container">
+    <l-icon class="icontecket" size="40" color="#34BFA3"  name="order"color="#3683d6" />
+    <text class="mytickets">我的入场券</text>      
+  </view>
+</view>
+
+
+<view class="container4">
+  <view bind:tap="onTap2" hover-class="hover" class="exit-container">
+    <l-icon class="iconexit" size="40" color="#34BFA3"  name="forward"color="#3683d6" />
+    <text class="exit">退出登录</text>      
+  </view>
+</view>
+
+
+
+
+
+
+
+
+ 
+

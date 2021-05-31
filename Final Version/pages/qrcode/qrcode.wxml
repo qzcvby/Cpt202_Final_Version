@@ -1,0 +1,14 @@
+<view class='main'>
+<text>微信扫码支付</text>
+</view>
+<image mode="aspectFit" src="https://tva1.sinaimg.cn/large/008eGmZEgy1gpocboubgtj30ja0ikq5a.jpg" />
+
+
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modalDlg" wx:if="{{showModal}}">
+    <text class="text">预约成功</text>
+    <view bindtap="ok" class="ok"  >好的</view>
+</view>
+<view bindtap="btn" class="btn">已支付成功</view>
+
+<view bindtap="navigateBack" class="btn">未成功支付</view>

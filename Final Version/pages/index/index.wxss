@@ -1,0 +1,132 @@
+.index_swiper swiper {
+  width: 750rpx;
+  height: 340rpx;
+}
+.index_swiper swiper image {
+  width: 100%;
+}
+.index_cate {
+  display: flex;
+}
+.index_cate navigator {
+  padding: 40rpx;
+  flex: 1;
+}
+.index_cate navigator image {
+  width: 75%;
+}
+
+.header0 {
+  display: flex;
+}
+.header0 view image{
+  width: 15%;
+}
+.title{
+  font-size: 40rpx;
+ 
+}
+.t2{
+  font-size: 30rpx;
+}
+.header0{
+  border-left-width: 2px;
+  border-left-style: hidden;
+  
+  display: flex;
+
+  height: 400rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+
+}
+
+.header{
+  border-left-width: 2px;
+  border-left-style: hidden;
+  border-left-color:rgb(3, 70, 3);
+  display: flex;
+
+  height: 100rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+
+}
+
+.content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content-item{
+  height: 150rpx;
+  width: 20%;
+  background-color: rgb(255, 255, 255);
+  margin: 14rpx;
+  position: relative;
+  
+}
+
+.content-item image{
+  width: 100%;
+  height: 80%;
+  
+}
+
+.content-item-text{
+  position:absolute;
+  bottom: -18px;
+  
+  font-size: 15px;
+  padding-left: 30% ;
+}
+
+.btn1{
+ 
+  width: 100%;
+  margin-top: 20rpx;
+  background-color: rgb(135, 222, 210);
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
+
+.btnImg {
+  margin-right: 8rpx;
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.btn1::after {
+  border-radius: 98rpx;
+  border: 0; 
+}
+.right_button{
+  
+  display: flex;
+}
+.btn2{
+  width: 80%;
+  margin-top: 20rpx;
+  background-color: rgb(135, 222, 210);
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  float: right;
+}
+.authorization{
+  margin-top: 350px;
+}

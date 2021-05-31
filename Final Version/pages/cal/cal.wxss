@@ -1,0 +1,41 @@
+.scroll-view {
+  height: 200rpx;
+  background-color: #313751;
+  width: 100%;
+  white-space: nowrap;
+}
+.item {
+  height: 200rpx;
+  display: inline-block;
+}
+.text-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+.month {
+  font-size: 30rpx;
+  margin-top: 10rpx;
+}
+.week {
+  font-size: 32rpx;
+  margin-top: 10rpx;
+}
+.day {
+  font-size: 32rpx;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 60rpx;
+  margin-top: 20rpx;
+}
+/* 日期选中的样式 */
+.day-active {
+  background-color: #FFB400;
+  color: #fff;
+}

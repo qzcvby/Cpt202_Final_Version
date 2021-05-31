@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "l-avatar":"/miniprogram_npm/lin-ui/avatar/index",
+    "l-icon":"/miniprogram_npm/lin-ui/icon/index"
+    
+  },
+  "navigationBarTitleText": "个人信息"
+ 
+ 
+}

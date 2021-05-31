@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "date": "../../components/date/date",
+    "popup": "../../components/popup/popup"
+  },
+  "navigationBarTitleText": "选择场地"
+}

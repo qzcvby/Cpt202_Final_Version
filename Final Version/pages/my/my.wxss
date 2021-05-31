@@ -1,0 +1,160 @@
+/* pages/my information/my information.wxss */
+
+.container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  
+  
+}
+.container2{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+  
+}
+
+.container3{
+  display:flex;
+  flex-direction:center;
+  align-items:center;
+  justify-content:center;
+  
+}
+
+.l-avatar{
+  margin-top:10rpx;
+  margin-left:10rpx;
+}
+
+.motto{ 
+  color:#666;
+  margin-top:10rpx;
+  font-size:32rpx;
+  font-weight:bold;
+}
+
+.journey-container{
+  border:1px solid #405f80;
+  width:250rpx;
+  height:80rpx;
+  display:flex;
+  border-radius:5px;
+  text-align:center;
+  margin-top:50rpx;
+
+
+}
+.tickets-container{  
+  border:1px solid #405f80;
+  width:250rpx;
+  height:80rpx;
+  border-radius:5px;
+  text-align:center;
+  display:flex;
+  justify-content:flex-start;
+  margin-top:50rpx;
+
+}
+.exit-container{
+  border:1px solid #405f80;
+  width:250rpx;
+  height:80rpx;
+  display:flex;
+  border-radius:5px;
+  text-align:center;
+  margin-top:50rpx;
+
+
+}
+.iconorder{
+  display:flex;
+  flex-direction:row;
+  align-items:flex-start;
+  margin-top:20rpx;
+  margin-left:20rpx;
+}
+.icontecket{
+  display:flex;
+  flex-direction:row;
+  align-items:flex-start;
+  margin-top:20rpx;
+  margin-left:20rpx;
+}
+.iconexit{
+  display:flex;
+  flex-direction:row;
+  align-items:flex-start;
+  margin-top:20rpx;
+  margin-left:20rpx;
+}
+
+.mytickets{
+  display:flex;
+  flex-direction:column;
+  font-size:30rpx;
+    color: #405f88;
+    line-height:rpx;
+    align-items:flex-start;
+    font-weight:bold;
+    margin-top:20rpx;
+    margin-left:10rpx;
+}
+  .journey{
+    display:flex;
+    flex-direction:column;
+    font-size:30rpx;
+      color: #405f88;
+      line-height:rpx;
+      align-items:flex-start;
+      font-weight:bold;
+      margin-top:20rpx;
+      margin-left:10rpx;
+  }
+   .exit{
+    display:flex;
+    flex-direction:column;
+    font-size:30rpx;
+      color: #405f88;
+      line-height:rpx;
+      align-items:flex-start;
+      font-weight:bold;
+      margin-top:20rpx;
+      margin-left:10rpx;
+  }
+.hover{
+  background-color:gray;
+}
+.container3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container4{
+  display:flex;
+  flex-direction:center;
+  align-items:center;
+  justify-content:center;
+  
+}
+.container5{
+  display:flex;
+  flex-direction:center;
+  align-items:center;
+  justify-content:center;
+  
+  margin-top: 20rpx;
+}
+.describe {
+  color: #3683d6;
+  font-size: 28rpx;
+  margin-left:20rpx;
+}
+
+
+
+
+page{
+  
+}

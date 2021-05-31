@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+   
+    "popup": "../../components/popup/popup"
+  },
+  "navigationBarTitleText": "体育馆"
+}

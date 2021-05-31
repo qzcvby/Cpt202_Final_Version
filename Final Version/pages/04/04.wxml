@@ -1,0 +1,122 @@
+<!-- 1.顶端场地类型 -->
+<view >
+ <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}" >
+  <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">篮球</view>
+  <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">羽毛球</view>
+  <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">健身</view>
+  <view class="tab-item {{currentTab==5?'active':''}}" data-current="3" bindtap="swichNav">乒乓球</view>
+</scroll-view>
+
+
+
+ <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+
+  <swiper-item data-current="0">
+
+   <scroll-view scroll-y="true" class="scoll-h" >
+   
+    <block wx:for="{{[0]}}" wx:key="*this">
+     <view class="item-ans">
+      <view class="avatar">
+       <image class="img" src="/图标库/篮球.png"></image>
+      </view>
+      <view class="expertInfo">
+       <view class="name">篮球场地</view>
+       <view class="tag">¥60起</view>
+     
+      </view>
+      <navigator url="/pages/test/test?type=篮球场" class="askBtn"  open-type='navigateTo'>预订</navigator> 
+
+     
+     <!-- 时间部分 -->
+<view class = "item">
+
+</view>
+
+     </view>
+    </block>
+   
+   </scroll-view>
+ </swiper-item>
+
+
+ <swiper-item data-current="1">
+   <scroll-view scroll-y="true" class="scoll-h" >
+
+    <block wx:for="{{[0]}}" wx:key="*this">
+     <view class="item-ans">
+      <view class="avatar">
+       <image class="img" src="/图标库/羽毛球.png"></image>
+      </view>
+      <view class="expertInfo">
+       <view class="name">羽毛球场地</view>
+       <view class="tag">¥60起</view>
+     
+      </view>
+      <navigator url="/pages/test/test?type=羽毛球" class="askBtn">预订</navigator> 
+      <!-- <picker mode="date" value="{{dateValue}}" start="1999-01-01" end="2999-12-12" bindchange="datePickerBindchange" class="askBtn" >
+           {{dateValue}}
+     </picker> -->
+     </view>
+    </block>
+
+  
+   </scroll-view>
+
+  </swiper-item>
+
+  <swiper-item data-current="2">
+   <scroll-view scroll-y="true" class="scoll-h" >
+
+    <block wx:for="{{[0]}}" wx:key="*this">
+     <view class="item-ans">
+      <view class="avatar">
+       <image class="img" src="/图标库/健身.png"></image>
+      </view>
+      <view class="expertInfo">
+       <view class="name">健身单次票</view>
+       <view class="tag">¥20</view>
+       <!-- <view class="answerHistory">09:00-10:00 </view> -->
+       <!-- <view class="tag">知名情感博主</view>
+       <view class="answerHistory">134个回答，2234人听过 </view> -->
+      </view>
+      <navigator url="/pages/test/test?type=健身" class="askBtn">预订</navigator> 
+     
+      
+     </view>
+    </block>
+
+
+   </scroll-view>
+
+  </swiper-item>
+
+ 
+
+  <swiper-item data-current="3">
+   <scroll-view scroll-y="true" class="scoll-h" >
+    <block wx:for="{{[0]}}" wx:key="*this">
+     <view class="item-ans">
+      <view class="avatar">
+       <image class="img" src="/图标库/乒乓球.png"></image>
+      </view>
+      <view class="expertInfo">
+       <view class="name">乒乓球场地</view>
+       <view class="tag">¥25起</view>
+     
+      </view>
+      <navigator url="/pages/test/test?type=乒乓球" class="askBtn">预订</navigator> 
+      
+     </view>
+    </block>
+   
+   </scroll-view>
+
+  </swiper-item>
+
+
+ 
+ 
+
+</swiper>
+</view>
