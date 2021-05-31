@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <!--配置全局的属性-->
+<!--    <settings>-->
+<!--        &lt;!&ndash;获取数据库的自增主键&ndash;&gt;-->
+<!--        &lt;!&ndash;insert返回主键值等&ndash;&gt;-->
+<!--        <setting name="useGeneratedKeys" value="true"/>-->
+<!--        &lt;!&ndash;使用列标签替换别名&ndash;&gt;-->
+<!--        <setting name="useColumnLabel" value="true"/>-->
+<!--        &lt;!&ndash; 开启驼峰命名转换: Table{create_time} -> Entity{createTime} &ndash;&gt;-->
+<!--&lt;!&ndash;        <setting name="mapUnderscoreToCamelCase" value="true"/>&ndash;&gt;-->
+
+<!--    </settings>-->
+</configuration>
+<!--<configuration>-->
+<!--    &lt;!&ndash;-->
+<!--    properties配置，用于加载外部的properties配置文件-->
+<!--    &ndash;&gt;-->
+<!--    <properties resource="db.properties"></properties>-->
+
+<!--    &lt;!&ndash;-->
+<!--    environments 主要用于数据源的配置-->
+<!--    可以配置多个数据源~通过default属性来指定当前项目运行过程中使用的是哪个数据源-->
+<!--    &ndash;&gt;-->
+<!--    <environments default="development">-->
+<!--        &lt;!&ndash;-->
+<!--        environment 用于配置一个具体的独立的数据源-->
+<!--        id属性用于给当前数据源定义一个名称，方便我们的项目指定-->
+<!--        &ndash;&gt;-->
+<!--        <environment id="development">-->
+<!--            &lt;!&ndash;-->
+<!--            transactionManager 用于配置事务管理，默认下使用的是JDBC事务管理-->
+<!--            &ndash;&gt;-->
+<!--            <transactionManager type="JDBC"/>-->
+<!--            &lt;!&ndash; 使用数据库连接池 &ndash;&gt;-->
+<!--            &lt;!&ndash;-->
+<!--            dataSource具体数据源的连接信息：type属性用于指定是否使用连接池-->
+<!--            &ndash;&gt;-->
+<!--            <dataSource type="POOLED">-->
+<!--                <property name="driver" value="${driver}"/>-->
+<!--                <property name="url" value="${url}"/>-->
+<!--                <property name="username" value="${username}"/>-->
+<!--                <property name="password" value="${password}"/>-->
+<!--            </dataSource>-->
+<!--        </environment>-->
+
+<!--    </environments>-->
+<!--    &lt;!&ndash; 映射配置文件的路径 &ndash;&gt;-->
+<!--    &lt;!&ndash;-->
+<!--    mappers主要用于配置我们外部的映射配置文件-->
+<!--    在主配置文件中需要引入加载映射配置文件-->
+<!--    &ndash;&gt;-->
+<!--    <mappers>-->
+<!--    &lt;!&ndash;mapper 主要配置引入某一个具体的映射文件，resource进行路径方式的引入&ndash;&gt;-->
+<!--    &lt;!&ndash;<mapper resource="org/mybatis/example/BlogMapper.xml"/>&ndash;&gt;-->
+<!--        <mapper resource="mapper/groundMapper.xml"></mapper>-->
+<!--    </mappers>-->
+
+<!--&lt;!&ndash;    <typeAliases>&ndash;&gt;-->
+<!--&lt;!&ndash;        <package name="com.luyu.wechat_backend.entity"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </typeAliases>&ndash;&gt;-->
+
+<!--</configuration>-->

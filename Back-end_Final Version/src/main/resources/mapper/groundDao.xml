@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+mapper 用于定义一个映射配置文件的根节点
+namespace 命名空间，主要进行session级别的缓存管理
+通常情况，命名空间的值，就是当前操作实体类的全名称
+-->
+<mapper namespace="com.luyu.wechat_backend.dao.GroundDao">
+    <select id="showGround" resultType="com.luyu.wechat_backend.entity.ground">
+        SELECT num, orderSlot,status
+        FROM ground
+        WHERE name = #{name}
+          and todayTime = #{todayTime}
+    </select>
+
+    <insert id="insertGround" parameterType="com.luyu.wechat_backend.entity.ground">
+        INSERT INTO ground(name, todayTime, createTime, phone, orderSlot, num, uuid, status, orderId, price)
+        VALUES (#{name}, #{todayTime}, #{createTime}, #{phone},
+                #{orderSlot}, #{num}, #{uuid}, #{status}, #{orderId}, #{price})
+    </insert>
+
+    <select id="queryOrder" resultType="com.luyu.wechat_backend.entity.ground">
+        SELECT *
+        FROM ground
+        WHERE phone = #{phone}
+    </select>
+
+    <select id="changeOrder" resultType="com.luyu.wechat_backend.entity.ground">
+        SELECT *
+        FROM ground
+        WHERE uuid = #{uuid}
+    </select>
+
+    <update id="updateStatus" parameterType="com.luyu.wechat_backend.entity.ground">
+        UPDATE ground
+        <set>
+            status = #{status}
+        </set>
+        where uuid=#{uuid}
+    </update>
+
+</mapper>
+
